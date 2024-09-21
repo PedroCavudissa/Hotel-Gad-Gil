@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Hotel GADGIL - Reservas</title>
+    <link rel="stylesheet" href="reservas.css">
+    <link rel="stylesheet" href="../css/reservas.css">
+    <link rel="stylesheet" href="../css/quartos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="./">Home</a></li>
+                <li><a href="./quarto">Quartos</a></li>
+                <li><a href="./restaurante">Restaurante</a></li>
+                <li><a href="./lazer">Espaços de Lazer</a></li>
+                <li><a href="./conferencia">Sala de Reuniões & Conferências</a></li>
+                <li><a href="./reserva">Reservar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="booking">
+            <h2>Faça sua Reserva</h2>
+            <form action="/user/reserva/" method="POST">
+                <label for="nome_cliente">Nome:</label>
+                <input type="text" id="nome_cliente" name="nome_cliente" required>
+
+                <label for="apelido">Apelido:</label>
+                <input type="text" id="apelido" name="apelido" required>
+
+                <label for="bi">BI:</label>
+                <input type="text" id="bi" name="bi" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="datachekin">Data de Chegada:</label>
+                <input type="date" id="datachekin" name="datachekin" required>
+
+                <label for="datacheckout">Data de Saída:</label>
+                <input type="date" id="datacheckout" name="datacheckout" required>
+
+                <label for="quantidade_pessoas">Quantidade de Pessoas:</label>                
+                <input type="number" name="quantidade_pessoas" id="quantidade_pessoas" required>  
+
+                <label for="numeroQuartos">Número de Quartos:</label>                
+                <input type="number" name="numeroQuartos" id="numeroQuartos" required>
+
+                <label for="pagamento">Forma de Pagamento:</label>
+                <select id="pagamento" name="pagamento">
+                    <option value="hotel">Pague no Hotel</option>
+                    <option value="online">Pague Online</option>
+                </select>
+
+                <label for="imagem">Faz o upload da imagem</label>
+                <input type="file" src="" alt="">
+
+                <button type="submit" class="btn">Reservar Agora</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 Hotel GADGIL. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</html>

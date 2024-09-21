@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Quartos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Gerenciar Quartos</h1>
+        <form action="/quarto/" method="POST" enctype="multipart/form-data">
+            <!-- Campo para a imagem -->
+            <input type="file" name="imagem" required>
+            
+            <!-- Outros campos do formulário -->
+            <input type="text" name="Quartoscapacidade" placeholder="Capacidade" required>
+            <input type="text" name="QuartosPreco" placeholder="Preço" required>
+            <input type="text" name="QuartosDisponibilidade" placeholder="Disponibilidade" required>
+            <textarea name="QuartosDescricao" placeholder="Descrição" required></textarea>
+            <input type="number" name="NumeroQuartos" placeholder="Número de Quartos" required>
+        
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="/admin/quartos/actualizar/:id" class="btn btn-primary">Actualizar</a>
+            <a href="/admin/" class="btn btn-primary">Voltar</a>
+        </form>
+        
+    
+            <!-- Botão para Deletar -->
+            <button type="submit" class="btn btn-primary">Deletar</button>
+          </form>
+          <form action="/admin/quarto/pesquisar/" method="POST">
+            <label for="id">ID do Elemento:</label>
+            <input type="text" class="form-control" id="id" name="id" required>
+    
+            <!-- Botão para Pesquisar -->
+            <button type="submit" class="btn btn-primary">Pesquisar</button>
+        </form>
+        <hr>
+        <h2>Quartos Criados</h2>
+        <ul id="QuartosList" class="list-group"></ul>
+    </div>
+    <div>
+    
+            <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Nome</th>
+                    <th>Capacidade</th>
+                    <th>ID</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% Quarto.forEach(Quarto => { %>
+                    <tr>
+                      <td><%= Quarto.nome %></td>
+                      <td><%= Quarto.capacidade %></td>
+                      <td><%= Quarto.id_quarto %></td>
+                    </tr>
+                  <% }) %>
+                </tbody>
+              </table>
+        
+           </div>
+<!-- 
+    <script>
+        
+// Gerenciar Quatos
+document.getElementById('QuartosForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    let nome = document.getElementById('Quartosnome').value;
+    let capacidade = document.getElementById('Quartoscapacidade').value;
+    if (nome && capacidade) {
+        let productList = document.getElementById('QuartosList');
+        let li = document.createElement('li');
+        li.className = 'list-group-item';
+        li.innerHTML = `<h3>${nome}</h3><p>capacidade: R$${capacidade}</p>`;
+        productList.appendChild(li);
+    }
+});
+    </script>-->
+   
+</body>
+</html>

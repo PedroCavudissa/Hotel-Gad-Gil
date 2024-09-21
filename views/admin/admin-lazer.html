@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Lazer</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Gerenciar Lazer</h1>
+        <form id="lazerForm" action="/admin/lazer/" method="post">
+            <div class="form-group">
+                <label for="lazernome">Título do Lazer</label>
+                <input type="text" class="form-control" id="lazernome" name="lazernome" placeholder="Digite o título" required>
+            </div>
+            <div class="form-group">
+                <label for="lazercapacidade">Capacidade</label>
+                <input type="number" class="form-control" id="lazercapacidade" name="lazercapacidade" rows="3" placeholder="Digite a Capacidade" required>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Salvar lazer</button>
+            <a href="/admin/lazer/listar/" class="btn btn-primary">Listar lazer</a>
+            <a href="/admin/lazer/actualizar/:id" class="btn btn-primary">Actualizar lazer</a>
+            <a href="/admin/" class="btn btn-primary">Voltar</a>
+        </form>
+        <form action="/admin/lazer/deletar/" method="post">
+          <label for="id">ID do Elemento:</label>
+          <input type="text" class="form-control" id="id" name="id" required>
+  
+          <!-- Botão para Deletar -->
+          <button type="submit" class="btn btn-primary">Deletar</button>
+        </form>
+        <form action="/admin/lazer/pesquisar/" method="POST">
+          <label for="id">ID do Elemento:</label>
+          <input type="text" class="form-control" id="id" name="id" required>
+  
+          <!-- Botão para Pesquisar -->
+          <button type="submit" class="btn btn-primary">Pesquisar</button>
+      </form>
+        <hr>
+        <h2>Lazer Salvos</h2>
+        <ul id="lazerList" class="list-group"></ul>
+    </div>
+
+    
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Capacidade</th>
+          <th>ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% Lazer.forEach(Lazer => { %>
+          <tr>
+            <td><%= Lazer.nome %></td>
+            <td><%= Lazer.capacidade %></td>
+            <td><%= Lazer.id_lazer %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+
+
+
+<!--
+
+<script>
+        // Gerenciar Lazer
+    document.getElementById('lazerForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    let nome = document.getElementById('lazernome').value;
+    let capacidade = document.getElementById('lazercapacidade').value;
+    if (nome && capacidade) {
+        let productList = document.getElementById('lazerList');
+        let li = document.createElement('li');
+        li.className = 'list-group-item';
+        li.innerHTML = `<h3>${nome}</h3><p>capacidade: R$${capacidade}</p>`;
+        productList.appendChild(li);
+    }
+    });
+    </script>    
+-->
+    
+</body>
+</html>

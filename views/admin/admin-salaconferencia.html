@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Conferencias</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Gerenciar Sala de Conferencias</h1>
+        <form id="ConferenciasForm" action="/admin/conferencia/" method="post">
+            <div class="form-group">
+                <label for="Conferenciasnome">Título do Lazer</label>
+                <input type="text" class="form-control" id="Conferenciasnome" name="Conferenciasnome" placeholder="Digite o título" required>
+            </div>
+            <div class="form-group">
+                <label for="Conferenciascapacidade">Capacidade</label>
+                <input type="number" class="form-control" id="Conferenciascapacidade" name="Conferenciascapacidade" rows="3" placeholder="Digite a Capacidade" required>
+            </div>
+           
+            <button type="submit" class="btn btn-primary">Salvar</button>
+            <a href="/admin/conferencia/listar/" class="btn btn-primary">Listar</a>
+            <a href="/admin/conferencia/actualizar/:id" class="btn btn-primary">Actualizar</a>
+            <a href="/admin/" class="btn btn-primary">Voltar</a>
+        </form>
+        <form action="/admin/conferencia/deletar/" method="post">
+          <label for="id">ID do Elemento:</label>
+          <input type="text" class="form-control" id="id" name="id" required>
+    
+          <!-- Botão para Deletar -->
+          <button type="submit" class="btn btn-primary">Deletar</button>
+        </form>
+        <form action="/admin/conferencia/pesquisar/" method="POST">
+          <label for="id">ID do Elemento:</label>
+          <input type="text" class="form-control" id="id" name="id" required>
+    
+          <!-- Botão para Pesquisar -->
+          <button type="submit" class="btn btn-primary">Pesquisar</button>
+      </form>
+        <hr>
+        <h2>Sala de Conferencias Criados</h2>
+        <ul id="ConferenciasList" class="list-group"></ul>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Capacidade</th>
+            <th>ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% Conferencia.forEach(Conferencia => { %>
+            <tr>
+              <td><%= Conferencia.nome %></td>
+              <td><%= Conferencia.capacidade %></td>
+              <td><%= Conferencia.id_salaconferencia %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+</body>
+</html>

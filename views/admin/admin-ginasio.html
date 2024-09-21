@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Ginásios</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <div class="container mt-5">
+            <h1>Gerenciar Ginásios</h1>
+            <form  action="/admin/ginasio/" id="ginasioForm" method="post">
+                <div class="form-group">
+                    <label for="ginasionome">Título do Ginásios</label>
+                    <input type="text" class="form-control" id="ginasionome" name="ginasionome" placeholder="Digite o título" required>
+                </div>
+                <div class="form-group">
+                    <label for="ginasiocapacidade">Capacidade Do Ginásios</label>
+                    <input type="number" class="form-control" id="ginasiocapacidade" name="ginasiocapacidade" rows="3" placeholder="Digite A Capacidade" required>
+                </div>
+               
+                <button type="submit" class="btn btn-primary">Salvar Ginásios</button>
+                <a href="/admin/ginasio/listar/" class="btn btn-primary">Listar Ginásios</a>
+                <a href="/admin/ginasio/actualizar/:id" class="btn btn-primary">Actualizar Ginásios</a>
+                <a href="/admin/" class="btn btn-primary">Voltar</a>
+            </form>
+            
+            <form action="/admin/ginasio/deletar/" method="post">
+              <label for="id">ID do Elemento:</label>
+              <input type="text" class="form-control" id="id" name="id" required>
+      
+              <!-- Botão para Deletar -->
+              <button type="submit" class="btn btn-primary">Deletar</button>
+            </form>
+            <form action="/admin/ginasio/pesquisar/" method="POST">
+              <label for="id">ID do Elemento:</label>
+              <input type="text" class="form-control" id="id" name="id" required>
+      
+              <!-- Botão para Pesquisar -->
+              <button type="submit" class="btn btn-primary">Pesquisar</button>
+          </form>
+            <hr>
+            <h2>Ginásios Criados</h2>
+            <ul id="ginasioList" class="list-group"></ul>
+    </div>
+   <div>
+    
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Capacidade</th>
+            <th>ID</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% Ginasio.forEach(Ginasio => { %>
+            <tr>
+              <td><%= Ginasio.nome %></td>
+              <td><%= Ginasio.capacidade %></td>
+              <td><%= Ginasio.id_ginasio %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+
+   </div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciar Reservas</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1>Gerenciar Reservas</h1>
+        <h2>Reservas Criadas</h2>
+        <ul id="postList" class="list-group"></ul>
+
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="/admin/reserva/deletar/:ginasioid" class="btn btn-primary">Eliminar</a>
+        <a href="/admin/reserva/listar/" class="btn btn-primary">Listar</a>
+        <a href="/admin/reserva/actualizar/:id" class="btn btn-primary">Actualizar</a>
+        <a href="/admin/" class="btn btn-primary">Voltar</a>
+
+    </div>
+    <form action="/admin/reserva/deletar/" method="post">
+      <label for="id">ID do Elemento:</label>
+      <input type="text" class="form-control" id="id" name="id" required>
+
+      <!-- Botão para Deletar -->
+      <button type="submit" class="btn btn-primary">Deletar</button>
+    </form>
+    <form action="/admin/reserva/pesquisar/" method="POST">
+      <label for="id">ID do Elemento:</label>
+      <input type="text" class="form-control" id="id" name="id" required>
+
+      <!-- Botão para Pesquisar -->
+      <button type="submit" class="btn btn-primary">Pesquisar</button>
+  </form>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Apelido</th>
+            <th>BI</th>
+            <th>Email</th>
+            <th>Data de Entrada</th>
+            <th>Data de Saída</th>
+            <th>Quantidade de Pessoas</th>
+            <th>Número de Quartos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% Reserva.forEach(Reserva => { %>
+            <tr>
+              <td><%= Reserva.id %></td>
+              <td><%= Reserva.nome_cliente %></td>
+              <td><%= Reserva.apelido %></td>
+              <td><%= Reserva.bi %></td>
+              <td><%= Reserva.email %></td>
+              <td><%= Reserva.datachekin %></td>
+              <td><%= Reserva.datacheckout %></td>
+              <td><%= Reserva.quantidade_pessoas %></td>
+              <td><%= Reserva.numeroQuarto %></td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    <script src="/JS/script.js"></script>
+</body>
+</html>
