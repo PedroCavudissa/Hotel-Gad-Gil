@@ -1,0 +1,22 @@
+.fun2{
+    background-image: url("../img.s/banner.s/adega-santiago.jpg") ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#carouselExampleIndicators{
+    margin: 0 0 2% 20%;
+    width: 60%;
+}
+footer{
+    background-color: black;
+    padding: 10px;
+    border-radius: 50px;
+}
+footer P{
+    color: white; 
+    text-align: center;
+    font-weight: 700;
+}
+#ig{
+    margin: 0 0 4% 22%;
+}

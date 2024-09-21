@@ -1,0 +1,90 @@
+.fun2{
+    background-image: url("../img.s/banner.s/reuniois.jpg") ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#primeiro{
+    margin-top: 8%;
+}
+#primeiro p{
+    width: 40%;
+    text-align: justify;
+    padding: 5px;
+    margin: 0 0 0 10%;
+}
+#primeiro img{
+    margin: -24% 10% 0 0;
+}
+#carateristicas{
+    padding: 5px;
+    margin: 6% 0 0 0;
+}
+#carateristicas div{
+    padding: 5px;
+    margin: 0 8% 0 8%;
+}
+#carac{
+    padding: 5px;
+    text-align: center;
+}
+#carac li{
+    display: block;
+}
+#carac h1{
+    font-weight: 800;
+    color: rgb(70, 70, 70);
+}
+#carac p{
+    color: rgb(66, 66, 66);
+}
+#caractereistica2{
+    background-color: rgb(58, 54, 55);
+    padding: 5px;
+    border-radius: 20px;
+    color: white;
+}
+#caractereistica2 div{
+    margin: 0 8% 0 8%;
+}
+section{
+    margin-top: 4%;
+}
+#cont{
+    margin-bottom: 6%;
+}
+#img-section{
+    width: 40%;
+    border-radius: 10px;
+}
+#lat{
+    text-align: center;
+    padding: 8px;
+    width: 40%;
+}
+#par1{
+    width: 70%;
+    margin: 2% 0 4% 15%;
+}
+#meio div{
+    margin: 0 10% 0 4%
+}
+button{
+    width: 30%;
+    height: 40px;
+    margin-top: 5%;
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(65, 59, 59);
+    cursor: pointer;
+    border: none;
+}
+footer{
+    background-color: black;
+    padding: 10px;
+    border-radius: 50px;
+}
+footer P{
+    color: white; 
+    text-align: center;
+    font-weight: 700;
+}

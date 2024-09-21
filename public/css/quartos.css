@@ -1,0 +1,228 @@
+.fun{
+    background-image: url("../img.s/banner.s/quarto.jpg") ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#list-menu li{
+    border-radius: 10px;
+    transition: 1s; 
+    margin: 40px 5px 0 5px;
+    padding: 0;
+    height: 50px;
+}
+ li a:hover{
+     background-color: rgba(153, 197, 247, 0.068);
+     color: white;
+ }
+nav{
+    background-color: rgba(0, 0, 0, 0.562);
+}
+nav a{
+    color: white;
+}
+#inf-main h1{
+    margin: 8% 0 0 5%;
+    color: white;
+    width: 30%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#inf-main p{
+    margin: 0 0 2% 5%;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#inf-main img{
+    margin: 2% 0 2% 4%;
+    padding: 10px;
+}
+#escolha{
+    width: 60%;
+    margin: 2% 0 0 8%;
+}
+#escolha a{
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14pt;
+}
+#for-check{
+    text-align: center;
+    width: 90%;
+    margin: 0.5% 0 1% 5.5%;
+    border-bottom: 1px solid rgb(116, 115, 115);
+}
+/*--------MAin-----------*/
+#itens{
+    color: rgb(77, 77, 77);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#parte{
+    border: 1px solid rgb(85, 85, 85);
+    font-size: 14pt;
+}
+#aux{
+    width: 20%;
+    float: right;
+    margin-right: 10%;
+    margin-top: 3%;
+    padding: 5px;
+}
+#aux li{
+    display: block;
+    border: 1px solid rgb(218, 215, 215);
+}
+#list-above{
+    padding: 5px;
+}
+#list-above li{
+    border: none;
+    display: inline-block;
+    font-size: 16pt;
+    padding: 5px;
+}
+
+#title{
+    text-align: center;
+    padding: 5px;
+    margin-top: 8%;
+}
+#title li{
+    display: inline-block;
+    padding: 5px;
+    margin-left: 4px;
+}
+#title h1{
+    color: rgb(109, 109, 109);
+}
+#escolha2{
+    padding: 5px;
+}
+#escolha2 li{
+    display: inline-block;
+    font-size: 14pt;
+}
+
+/*-----------Crds------------------*/
+.card{
+    box-shadow: 4px 6px 8px rgb(214, 214, 214);
+    margin: 0 0 2% 20%;
+}
+#nu{
+    height: 45px;
+    font-size: 14pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 5px;
+    color: white;
+    background-color: rgb(49, 48, 48);
+}
+#oferta{
+    text-decoration: underline;
+    font-size: 12pt;
+    font-weight: bold
+}
+#desc{
+    background-color: greenyellow;
+    border-bottom-right-radius: 30cqb;
+    width: 100px;
+    padding: 2px;
+    text-align: center;
+}
+#npessoa{
+    float: right;
+    margin: -12% 6% 0 0;
+    color: rgb(109, 109, 109);
+    font-size: 12pt;
+}
+#p1{
+    margin: -8% 12% 0 0;
+    float: right;
+    color: rgb(145, 143, 143);
+    font-size: 11pt;
+    text-decoration:line-through;
+}
+#p2{
+    margin: -3% 4% 0 0;
+    float: right;
+    color: greenyellow;
+    font-size: 18pt;
+}
+#list{
+    padding: 4px;
+    margin: 8% 0 5% 0;
+    text-align: center;
+    color: rgb(145, 143, 143);
+}
+#list li{
+    display: inline-block;
+    margin: 2px;
+    font-size: 12pt;
+}
+#oferta2{
+    text-decoration: underline;
+    font-size: 12pt;
+    font-weight: bold
+}
+#npessoa2{
+    float: right;
+    margin: -6% 6% 0 0;
+    color: rgb(109, 109, 109);
+    font-size: 12pt;
+}
+#p2-2{
+    margin: 4% 4% 0 0;
+    float: right;
+    color: greenyellow;
+    font-size: 18pt;
+}
+#list2{
+    padding: 4px;
+    margin: 16% 0 2% 0;
+    text-align: center;
+    color: rgb(145, 143, 143);
+}
+#list2 li{
+    display: inline-block;
+    margin: 2px;
+    font-size: 12pt;
+}
+#btn{
+    float: right;
+    margin-bottom: 4%;
+}
+/*----------------------footer----------------------*/
+#baixo{
+    background-color: rgb(22, 22, 22);
+    border-top-left-radius: 70px;
+    border-top-right-radius: 50px;
+    color: white;
+    margin-top: 4%;
+}
+#b{
+    text-align: center;
+    padding: 5px;
+}
+#direita{
+    border-left: 3px solid rgb(255, 174, 0);
+    padding: 10px;
+   
+}
+#reservar{
+    padding: 6px;
+    color: black;
+    background-color: rgb(255, 174, 0);
+    border-radius: 50px;
+    width: 120px;
+    border: none;
+}
+#p1-1{
+    width: 30%;
+    text-align: center;
+}
+#flex{
+    margin: 2% 2% 3% 2%;
+    
+    font-size: 10pt;
+}
+#flex div{
+    width: 50%;
+    font-family: Arial, Helvetica, sans-serif;
+}

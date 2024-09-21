@@ -1,0 +1,67 @@
+.fun2{
+    background-image: url("../img.s/banner.s/bebida1.jpg") ;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+#menu{
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(207,205 ,198 );
+    margin-top: -1%;
+}
+#menu li{
+    display: inline-block;
+    padding: 5px;
+    margin: 0 4% 0 4%;
+    border-radius: 4px;
+}
+#menu li:hover{
+    background-color: rgba(190, 190, 186, 0.932);
+}
+#menu a{
+    color: #fff;
+    text-decoration: none;
+}
+/*====================MAIN=================*/
+#cont{
+    margin-bottom: 4%;
+}
+#img-section{
+    width: 40%;
+    border-radius: 10px;
+}
+#lat{
+    text-align: center;
+    padding: 8px;
+    width: 40%;
+}
+#par1{
+    width: 90%;
+    margin: 2% 0 1% 5%;
+    font-size: 11pt;
+    text-align: justify;
+}
+#valor{
+    width: 90%;
+    margin: 2% 0 1% 5%;
+    border: 1px solid rgb(128, 125, 125);
+    font-size: 11pt;
+    box-shadow: 2px 2px 8px rgb(104, 103, 103);
+    text-align: justify;
+    padding: 5px;
+}
+#paragrafo{
+    width: 130px;
+    text-align: center;
+    height: 30px;
+}
+footer{
+    background-color: black;
+    padding: 10px;
+    border-radius: 50px;
+}
+footer P{
+    color: white; 
+    text-align: center;
+    font-weight: 700;
+}
